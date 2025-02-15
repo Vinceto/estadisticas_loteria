@@ -28,7 +28,7 @@
                 </tr>
                 <tr>
                     <th><?= __('Fecha') ?></th>
-                    <td><?= h($apuesta->fecha) ?></td>
+                    <td><?= h($apuesta->fecha->format('d/m/Y')) ?></td>
                 </tr>
             </table>
             <div class="text">
@@ -47,14 +47,14 @@
                             <th><?= __('Numero Sorteo') ?></th>
                             <th><?= __('Fecha Sorteo') ?></th>
                             <th><?= __('Juego Id') ?></th>
-                            <th><?= __('Numeros Acertados') ?></th>
+                            <th><?= __('Numeros Sorteados') ?></th>
                             <th class="actions"><?= __('Actions') ?></th>
                         </tr>
                         <?php foreach ($apuesta->sorteos as $sorteo) : ?>
                         <tr>
                             <td><?= h($sorteo->id) ?></td>
                             <td><?= h($sorteo->numero_sorteo) ?></td>
-                            <td><?= h($sorteo->fecha_sorteo) ?></td>
+                            <td><?= h($sorteo->fecha_sorteo->format('d/m/Y')) ?></td>
                             <td><?= h($sorteo->juego_id) ?></td>
                             <td><?= h($sorteo->numeros_sorteados) ?></td>
                             <td class="actions">

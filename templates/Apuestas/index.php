@@ -21,7 +21,7 @@
                 <?php foreach ($apuestas as $apuesta): ?>
                 <tr>
                     <td><?= $this->Number->format($apuesta->id) ?></td>
-                    <td><?= h($apuesta->fecha) ?></td>
+                    <td><?= h($apuesta->fecha->format('d/m/Y')) ?></td>
                     <td><?= h($apuesta->numero_carton) ?></td>
                     <td class="actions">
                         <?= $this->Html->link(__('View'), ['action' => 'view', $apuesta->id]) ?>

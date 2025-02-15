@@ -36,7 +36,7 @@
                 </tr>
             </table>
             <div class="text">
-                <strong><?= __('Numeros Acertados') ?></strong>
+                <strong><?= __('Numeros Sorteados') ?></strong>
                 <blockquote>
                     <?= $this->Text->autoParagraph(h($sorteo->numeros_sorteados)); ?>
                 </blockquote>
@@ -56,7 +56,7 @@
                         <?php foreach ($sorteo->apuestas as $apuesta) : ?>
                         <tr>
                             <td><?= h($apuesta->id) ?></td>
-                            <td><?= h($apuesta->fecha) ?></td>
+                            <td><?= h($apuesta->fecha->format('d/m/Y')) ?></td>
                             <td><?= h($apuesta->numero_carton) ?></td>
                             <td><?= h($apuesta->numeros_apostados) ?></td>
                             <td class="actions">
