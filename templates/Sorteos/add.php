@@ -22,7 +22,7 @@
                     echo $this->Form->control('numero_sorteo');
                     echo $this->Form->control('fecha_sorteo');
                     echo $this->Form->control('juego_id', ['options' => $juegos]);
-                    echo $this->Form->control('numeros_acertados');
+                    echo $this->Form->control('numeros_sorteados');
                     echo $this->Form->control('apuestas._ids', ['options' => $apuestas]);
                 ?>
             </fieldset>

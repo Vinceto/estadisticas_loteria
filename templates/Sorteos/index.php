@@ -23,7 +23,7 @@
                 <tr>
                     <td><?= $this->Number->format($sorteo->id) ?></td>
                     <td><?= $this->Number->format($sorteo->numero_sorteo) ?></td>
-                    <td><?= h($sorteo->fecha_sorteo) ?></td>
+                    <td><?= h($sorteo->fecha_sorteo->format('d/m/Y')) ?></td>
                     <td><?= $sorteo->hasValue('juego') ? $this->Html->link($sorteo->juego->nombre, ['controller' => 'Juegos', 'action' => 'view', $sorteo->juego->id]) : '' ?></td>
                     <td class="actions">
                         <?= $this->Html->link(__('View'), ['action' => 'view', $sorteo->id]) ?>

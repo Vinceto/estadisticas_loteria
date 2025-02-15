@@ -12,7 +12,7 @@ use Cake\ORM\Entity;
  * @property int $numero_sorteo
  * @property \Cake\I18n\Date $fecha_sorteo
  * @property int $juego_id
- * @property string $numeros_acertados
+ * @property string $numeros_sorteados
  *
  * @property \App\Model\Entity\Juego $juego
  * @property \App\Model\Entity\Apuesta[] $apuestas
@@ -32,7 +32,7 @@ class Sorteo extends Entity
         'numero_sorteo' => true,
         'fecha_sorteo' => true,
         'juego_id' => true,
-        'numeros_acertados' => true,
+        'numeros_sorteados' => true,
         'juego' => true,
         'apuestas' => true,
     ];

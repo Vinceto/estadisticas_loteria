@@ -78,9 +78,9 @@ class SorteosTable extends Table
             ->notEmptyString('juego_id');
 
         $validator
-            ->scalar('numeros_acertados')
-            ->requirePresence('numeros_acertados', 'create')
-            ->notEmptyString('numeros_acertados');
+            ->scalar('numeros_sorteados')
+            ->requirePresence('numeros_sorteados', 'create')
+            ->notEmptyString('numeros_sorteados');
 
         return $validator;
     }

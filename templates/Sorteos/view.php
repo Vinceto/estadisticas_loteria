@@ -38,7 +38,7 @@
             <div class="text">
                 <strong><?= __('Numeros Acertados') ?></strong>
                 <blockquote>
-                    <?= $this->Text->autoParagraph(h($sorteo->numeros_acertados)); ?>
+                    <?= $this->Text->autoParagraph(h($sorteo->numeros_sorteados)); ?>
                 </blockquote>
             </div>
             <div class="related">

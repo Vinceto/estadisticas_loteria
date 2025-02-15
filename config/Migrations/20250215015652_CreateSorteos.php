@@ -18,7 +18,7 @@ class CreateSorteos extends BaseMigration
         $table->addColumn('numero_sorteo', 'integer', ['null' => false])
             ->addColumn('fecha_sorteo', 'date', ['null' => false])
             ->addColumn('juego_id', 'integer', ['null' => false])
-            ->addColumn('numeros_acertados', 'text', ['null' => false, 'comment' => 'Guardado como JSON'])
+            ->addColumn('numeros_sorteados', 'text', ['null' => false, 'comment' => 'Guardado como JSON'])
             ->addForeignKey('juego_id', 'juegos', 'id', ['delete' => 'CASCADE', 'update' => 'NO_ACTION'])
         ->create();
     }

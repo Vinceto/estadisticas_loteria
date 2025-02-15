@@ -56,7 +56,7 @@
                             <td><?= h($sorteo->numero_sorteo) ?></td>
                             <td><?= h($sorteo->fecha_sorteo) ?></td>
                             <td><?= h($sorteo->juego_id) ?></td>
-                            <td><?= h($sorteo->numeros_acertados) ?></td>
+                            <td><?= h($sorteo->numeros_sorteados) ?></td>
                             <td class="actions">
                                 <?= $this->Html->link(__('View'), ['controller' => 'Sorteos', 'action' => 'view', $sorteo->id]) ?>
                                 <?= $this->Html->link(__('Edit'), ['controller' => 'Sorteos', 'action' => 'edit', $sorteo->id]) ?>
