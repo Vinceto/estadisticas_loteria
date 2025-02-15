@@ -21,12 +21,13 @@ class CreateApuestas extends BaseMigration
         ]);
         $table->addColumn('numero_carton', 'string', [
             'default' => null,
-            'limit' => 255,
+            'limit' => 50,
             'null' => false,
         ]);
         $table->addColumn('numeros_apostados', 'text', [
             'default' => null,
             'null' => false,
+            'comment' => 'Guardado como JSON'
         ]);
         $table->create();
     }

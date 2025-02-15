@@ -15,25 +15,11 @@ class CreateSorteos extends BaseMigration
     public function change(): void
     {
         $table = $this->table('sorteos');
-        $table->addColumn('numero_sorteo', 'integer', [
-            'default' => null,
-            'limit' => 11,
-            'null' => false,
-        ]);
-        $table->addColumn('fecha_sorteo', 'date', [
-            'default' => null,
-            'null' => false,
-        ]);
-        $table->addColumn('juego_id', 'integer', [
-            'default' => null,
-            'limit' => 11,
-            'null' => false,
-        ]);
-        $table->addColumn('numeros_acertados', 'text', [
-            'default' => null,
-            'null' => false,
-        ]);
-        $table->addForeignKey('juego_id', 'juegos', 'id', ['delete' => 'CASCADE', 'update' => 'NO_ACTION']);
-        $table->create();
+        $table->addColumn('numero_sorteo', 'integer', ['null' => false])
+            ->addColumn('fecha_sorteo', 'date', ['null' => false])
+            ->addColumn('juego_id', 'integer', ['null' => false])
+            ->addColumn('numeros_acertados', 'text', ['null' => false, 'comment' => 'Guardado como JSON'])
+            ->addForeignKey('juego_id', 'juegos', 'id', ['delete' => 'CASCADE', 'update' => 'NO_ACTION'])
+        ->create();
     }
 }

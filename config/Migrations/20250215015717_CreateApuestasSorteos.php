@@ -15,18 +15,10 @@ class CreateApuestasSorteos extends BaseMigration
     public function change(): void
     {
         $table = $this->table('apuestas_sorteos');
-        $table->addColumn('apuesta_id', 'integer', [
-            'default' => null,
-            'limit' => 11,
-            'null' => false,
-        ]);
-        $table->addColumn('sorteo_id', 'integer', [
-            'default' => null,
-            'limit' => 11,
-            'null' => false,
-        ]);
-        $table->addForeignKey('apuesta_id', 'apuestas', 'id', ['delete' => 'CASCADE', 'update' => 'NO_ACTION']);
-        $table->addForeignKey('sorteo_id', 'sorteos', 'id', ['delete' => 'CASCADE', 'update' => 'NO_ACTION']);
-        $table->create();
+        $table->addColumn('apuesta_id', 'integer', ['null' => false])
+          ->addColumn('sorteo_id', 'integer', ['null' => false])
+          ->addForeignKey('apuesta_id', 'apuestas', 'id', ['delete' => 'CASCADE', 'update' => 'NO_ACTION'])
+          ->addForeignKey('sorteo_id', 'sorteos', 'id', ['delete' => 'CASCADE', 'update' => 'NO_ACTION'])
+          ->create();
     }
 }
